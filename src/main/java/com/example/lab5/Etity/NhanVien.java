@@ -1,4 +1,4 @@
-package Etity;
+package com.example.lab5.Etity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,8 +14,7 @@ import java.time.LocalDate;
 @Table(name = "NhanVien")
 public class NhanVien {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "MaNV")
+    @Column(name = "MaNV", nullable = false, length = 10)
     private String MaNV;
 
     @Column(name = "TenNV")
@@ -26,6 +25,9 @@ public class NhanVien {
 
     @Column(name = "DiaChi")
     private String DiaChi;
+
+    @Column(name = "DienThoai")
+    private String DienThoai;
 
     @Column(name = "NgaySinh")
     private LocalDate NgaySinh;
